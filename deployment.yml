@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testcicd
+  name: my-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: testcicd
+      app: nodejs
   template:
     metadata:
       labels:
-        app: testcicd
+        app: nodejs
     spec:
       containers:
         - name: testcicd

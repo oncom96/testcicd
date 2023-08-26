@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: testcicd
-          image: gcr.io/$GOOGLE_PROJECT/nodejs:latest
+          image: asia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT/nodejs:latest
           ports:
             - containerPort: 3000

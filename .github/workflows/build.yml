@@ -25,7 +25,7 @@ jobs:
         GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
       run: |
         gcloud auth configure-docker 
-        docker build -t asia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT/nodejs:latest .
-        docker push asia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT/nodejs:latest
+        docker build -t gcr.io/$GOOGLE_PROJECT/nodejs:latest .
+        docker push gcr.io/$GOOGLE_PROJECT/nodejs:latest
 
         

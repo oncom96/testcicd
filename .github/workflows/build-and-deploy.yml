@@ -36,7 +36,7 @@ jobs:
         gcloud container clusters get-credentials autopilot-cluster-1 --region=asia-southeast2
         sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" deployment.yml
         sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" service.yml
-        kubectl apply -f testcicd/deployment.yml -n default
-        kubectl apply -f testcicd/service.yml -n default
+        kubectl apply -f /home/mahmud_saputro06/testcicd/deployment.yml -n default
+        kubectl apply -f /home/mahmud_saputro06/testcicd/service.yml -n default
 
         

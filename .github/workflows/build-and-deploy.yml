@@ -26,8 +26,8 @@ jobs:
         GOOGLE_PROJECT: ${{ secrets.GOOGLE_PROJECT }}
       run: |
         gcloud auth configure-docker asia-southeast2-docker.pkg.dev
-        docker build -t asia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT/oncom06/testcicd:latest .
-        docker push asia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT/oncom06/testcicd:latest
+        docker build -t asia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT/testcicd:latest .
+        docker push asia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT/testcicd:latest
 
     - name: deploy to gke
       env:
@@ -36,3 +36,5 @@ jobs:
         gcloud container clusters get-credentials autopilot-cluster-node asia-southeast1
         sed -i "s/GOOGLE_PROJECT/$GOOGLE_PROJECT/g" resources.yaml
         kubectl apply -f deployment.yaml
+
+        
